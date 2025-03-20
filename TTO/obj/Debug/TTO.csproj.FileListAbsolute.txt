@@ -18,3 +18,4 @@ C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.csproj.GenerateResource
 C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.csproj.CoreCompileInputs.cache
 C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.exe
 C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.pdb
+C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.MainScreen.resources
