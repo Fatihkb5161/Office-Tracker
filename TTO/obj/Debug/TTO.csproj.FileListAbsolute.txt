@@ -1,0 +1,20 @@
+C:\Users\mefat\OneDrive\Masaüstü\Görüntü İşleme Ödev\TTO\TTO\bin\Debug\TTO.exe.config
+C:\Users\mefat\OneDrive\Masaüstü\Görüntü İşleme Ödev\TTO\TTO\bin\Debug\TTO.exe
+C:\Users\mefat\OneDrive\Masaüstü\Görüntü İşleme Ödev\TTO\TTO\bin\Debug\TTO.pdb
+C:\Users\mefat\OneDrive\Masaüstü\Görüntü İşleme Ödev\TTO\TTO\obj\Debug\TTO.csproj.AssemblyReference.cache
+C:\Users\mefat\OneDrive\Masaüstü\Görüntü İşleme Ödev\TTO\TTO\obj\Debug\TTO.Form1.resources
+C:\Users\mefat\OneDrive\Masaüstü\Görüntü İşleme Ödev\TTO\TTO\obj\Debug\TTO.Properties.Resources.resources
+C:\Users\mefat\OneDrive\Masaüstü\Görüntü İşleme Ödev\TTO\TTO\obj\Debug\TTO.csproj.GenerateResource.cache
+C:\Users\mefat\OneDrive\Masaüstü\Görüntü İşleme Ödev\TTO\TTO\obj\Debug\TTO.csproj.CoreCompileInputs.cache
+C:\Users\mefat\OneDrive\Masaüstü\Görüntü İşleme Ödev\TTO\TTO\obj\Debug\TTO.exe
+C:\Users\mefat\OneDrive\Masaüstü\Görüntü İşleme Ödev\TTO\TTO\obj\Debug\TTO.pdb
+C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\bin\Debug\TTO.exe.config
+C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\bin\Debug\TTO.exe
+C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\bin\Debug\TTO.pdb
+C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.csproj.AssemblyReference.cache
+C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.Form1.resources
+C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.Properties.Resources.resources
+C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.csproj.GenerateResource.cache
+C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.csproj.CoreCompileInputs.cache
+C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.exe
+C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.pdb
