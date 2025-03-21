@@ -1,6 +1,6 @@
 ﻿namespace TTO
 {
-    partial class Form1
+    partial class Giris
     {
         /// <summary>
         ///Gerekli tasarımcı değişkeni.
@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Giris));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.username = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.password = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.username = new System.Windows.Forms.TextBox();
             this.resize = new System.Windows.Forms.PictureBox();
             this.exit = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -86,20 +86,6 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Giriş Yap";
             // 
-            // username
-            // 
-            this.username.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.username.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.username.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.username.Location = new System.Drawing.Point(40, 5);
-            this.username.Multiline = true;
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(323, 25);
-            this.username.TabIndex = 1;
-            this.username.Text = "E-posta";
-            this.username.Click += new System.EventHandler(this.username_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -121,6 +107,7 @@
             this.linkLabel2.TabIndex = 7;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Kayıt Ol";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // label1
             // 
@@ -144,6 +131,7 @@
             this.linkLabel1.TabIndex = 5;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Şifremi Unuttum";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // checkBox1
             // 
@@ -170,6 +158,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "GİRİŞ";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
             // 
@@ -225,6 +214,20 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
+            // username
+            // 
+            this.username.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.username.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.username.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.username.Location = new System.Drawing.Point(40, 5);
+            this.username.Multiline = true;
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(323, 25);
+            this.username.TabIndex = 1;
+            this.username.Text = "E-posta";
+            this.username.Click += new System.EventHandler(this.username_Click);
+            // 
             // resize
             // 
             this.resize.Image = ((System.Drawing.Image)(resources.GetObject("resize.Image")));
@@ -249,14 +252,14 @@
             this.exit.TabStop = false;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
-            // Form1
+            // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(472, 500);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Giris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);

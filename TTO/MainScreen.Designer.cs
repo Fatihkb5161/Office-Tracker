@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
@@ -39,7 +38,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +68,7 @@
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(17, 632);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(280, 54);
+            this.button5.Size = new System.Drawing.Size(305, 54);
             this.button5.TabIndex = 6;
             this.button5.Text = "Toplantı Salonu";
             this.button5.UseVisualStyleBackColor = true;
@@ -86,10 +84,11 @@
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(12, 550);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(235, 54);
+            this.button4.Size = new System.Drawing.Size(257, 54);
             this.button4.TabIndex = 5;
             this.button4.Text = "Projeler";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -105,6 +104,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "      Etkinlik Bigisi";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -120,6 +120,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "İzin Alma";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // linkLabel1
             // 
@@ -155,6 +156,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Ana Sayfa";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel2
             // 
@@ -163,12 +165,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1022, 19);
             this.panel2.TabIndex = 1;
-            // 
-            // ımageList1
-            // 
-            this.ımageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.ımageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // MainScreen
             // 
@@ -197,7 +193,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.Button button5;
     }
 }
