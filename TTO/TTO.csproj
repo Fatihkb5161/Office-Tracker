@@ -63,6 +63,17 @@
     <Compile Include="ConferanceReservation.Designer.cs">
       <DependentUpon>ConferanceReservation.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConferanceYonetimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConferanceYonetimi.Designer.cs">
+      <DependentUpon>ConferanceYonetimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Etkinlik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +85,18 @@
     </Compile>
     <Compile Include="Giris.Designer.cs">
       <DependentUpon>Giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="izinFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="izinFormu.Designer.cs">
+      <DependentUpon>izinFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzinYonetimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzinYonetimi.Designer.cs">
+      <DependentUpon>IzinYonetimi.cs</DependentUpon>
     </Compile>
     <Compile Include="IzınAlma.cs">
       <SubType>Form</SubType>
@@ -107,11 +130,20 @@
     <EmbeddedResource Include="ConferanceReservation.resx">
       <DependentUpon>ConferanceReservation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConferanceYonetimi.resx">
+      <DependentUpon>ConferanceYonetimi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Etkinlik.resx">
       <DependentUpon>Etkinlik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="izinFormu.resx">
+      <DependentUpon>izinFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzinYonetimi.resx">
+      <DependentUpon>IzinYonetimi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IzınAlma.resx">
       <DependentUpon>IzınAlma.cs</DependentUpon>
@@ -134,6 +166,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

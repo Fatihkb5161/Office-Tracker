@@ -10,13 +10,16 @@ using System.Windows.Forms;
 
 namespace TTO
 {
-    public partial class ConferanceReservation: Form
+    public partial class Admin: Form
     {
-        public ConferanceReservation()
+        public Admin()
         {
             InitializeComponent();
-
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

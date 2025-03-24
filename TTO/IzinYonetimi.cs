@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace TTO
 {
-    public partial class ConferanceReservation: Form
+    public partial class IzinYonetimi: Form
     {
-        public ConferanceReservation()
+        public IzinYonetimi()
         {
             InitializeComponent();
-
         }
 
     }

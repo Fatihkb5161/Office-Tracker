@@ -25,3 +25,6 @@ C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.Etkinlik.resources
 C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.Projeler.resources
 C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.Giris.resources
 C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.KayitOl.resources
+C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.ConferanceYonetimi.resources
+C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.IzinYonetimi.resources
+C:\Users\mefat\OneDrive\Masaüstü\TTO\TTO\obj\Debug\TTO.izinFormu.resources

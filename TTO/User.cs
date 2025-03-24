@@ -14,58 +14,32 @@ namespace TTO
 {
     public partial class MainScreen: Form
     {
-        int kullanici_turu = 1; // 0: Personel, 1: Admin
         IzınAlma izin_alma;
         ConferanceReservation reservation;
         Anasayfa anasayfa;
         Etkinlik etkinlik;
         Projeler projeler;
-
-        IzinYonetimi izin_yonetimi;
         public MainScreen()
         {
             InitializeComponent();
             this.IsMdiContainer = true;
-            if (kullanici_turu == 0) { this.Text = "Personel Ekranı"; }
-            else if (kullanici_turu == 1) { this.Text = "Yönetici Ekranı"; }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (kullanici_turu == 0)
+            if(izin_alma == null)
             {
-                if (izin_alma == null)
-                {
-                    izin_alma = new IzınAlma();
-                    izin_alma.FormClosed += IzinAlma_Closed;
-                    izin_alma.MdiParent = this;
-                    izin_alma.Dock = DockStyle.Fill;
-                    izin_alma.Show();
-                }
-                else
-                {
-                    izin_alma.Activate();
-
-                }
+                izin_alma = new IzınAlma();
+                izin_alma.FormClosed += IzinAlma_Closed;
+                izin_alma.MdiParent = this;
+                izin_alma.Dock = DockStyle.Fill;
+                izin_alma.Show();
             }
-
-            else if (kullanici_turu == 1 )
+            else
             {
-                if (izin_yonetimi == null)
-                {
-                    izin_yonetimi = new IzinYonetimi();
-                    izin_yonetimi.FormClosed += IzinYonetimi_Closed;
-                    izin_yonetimi.MdiParent = this;
-                    izin_yonetimi.Dock = DockStyle.Fill;
-                    izin_yonetimi.Show();
-                }
-                else
-                {
-                    izin_yonetimi.Activate();
+                izin_alma.Activate();
 
-                }
             }
-            
         }
 
         private void IzinAlma_Closed(object sender, EventArgs e)
@@ -73,18 +47,11 @@ namespace TTO
             izin_alma = null;
         }
 
-        private void IzinYonetimi_Closed(object sender, EventArgs e)
-        {
-            izin_yonetimi = null;
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
             if (reservation == null)
             {
                 reservation = new ConferanceReservation();
-                if (kullanici_turu == 0) { reservation.panel5.Visible = false; }
-                else if (kullanici_turu == 1) { reservation.panel5.Visible = true; }
                 reservation.FormClosed += ConferanceReservation_Closed;
                 reservation.MdiParent = this;
                 reservation.Dock = DockStyle.Fill;
@@ -95,7 +62,6 @@ namespace TTO
                 reservation.Activate();
 
             }
-
         }
 
         private void ConferanceReservation_Closed(object sender, EventArgs e)
@@ -167,11 +133,6 @@ namespace TTO
         private void Projeler_Closed(object sender, FormClosedEventArgs e)
         {
             projeler = null;
-        }
-
-        private void MainScreen_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
