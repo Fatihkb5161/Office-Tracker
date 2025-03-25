@@ -10,24 +10,22 @@ using System.Windows.Forms;
 
 namespace TTO
 {
-    public partial class ConferanceReservation: Form
+    public partial class bekleyenIzinler: Form
     {
-        public ConferanceReservation()
+        public bekleyenIzinler()
         {
             InitializeComponent();
-
+            Panel panel2 = panel1;
         }
 
-        private void ConferanceReservation_Load(object sender, EventArgs e)
+        private void bekleyenIzinler_Load(object sender, EventArgs e)
         {
-
+            
         }
-int saloon_no = 1;
+
         private void button1_Click(object sender, EventArgs e)
         {
-            conferance_saloon my_request = new conferance_saloon();
-            
-            my_request.label2.Text = $"ofis{saloon_no++}";
+            request my_request = new request();
             flowLayoutPanel1.Controls.Add(my_request); // max 21
         }
     }

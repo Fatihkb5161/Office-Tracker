@@ -14,7 +14,7 @@ namespace TTO
 {
     public partial class MainScreen: Form
     {
-        int kullanici_turu = 1; // 0: Personel, 1: Admin
+        int kullanici_turu = 0; // 0: Personel, 1: Admin
         IzınAlma izin_alma;
         ConferanceReservation reservation;
         Anasayfa anasayfa;
@@ -83,8 +83,6 @@ namespace TTO
             if (reservation == null)
             {
                 reservation = new ConferanceReservation();
-                if (kullanici_turu == 0) { reservation.panel5.Visible = false; }
-                else if (kullanici_turu == 1) { reservation.panel5.Visible = true; }
                 reservation.FormClosed += ConferanceReservation_Closed;
                 reservation.MdiParent = this;
                 reservation.Dock = DockStyle.Fill;

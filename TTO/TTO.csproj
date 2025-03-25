@@ -37,9 +37,12 @@
       <HintPath>..\packages\Microsoft.Office.Interop.Outlook.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Outlook.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +52,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Anasayfa.cs">
@@ -56,6 +62,12 @@
     </Compile>
     <Compile Include="Anasayfa.Designer.cs">
       <DependentUpon>Anasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bekleyenIzinler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bekleyenIzinler.Designer.cs">
+      <DependentUpon>bekleyenIzinler.cs</DependentUpon>
     </Compile>
     <Compile Include="ConferanceReservation.cs">
       <SubType>Form</SubType>
@@ -68,6 +80,12 @@
     </Compile>
     <Compile Include="ConferanceYonetimi.Designer.cs">
       <DependentUpon>ConferanceYonetimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conferance_saloon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="conferance_saloon.Designer.cs">
+      <DependentUpon>conferance_saloon.cs</DependentUpon>
     </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -124,14 +142,26 @@
       <DependentUpon>Projeler.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="request.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="request.Designer.cs">
+      <DependentUpon>request.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bekleyenIzinler.resx">
+      <DependentUpon>bekleyenIzinler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConferanceReservation.resx">
       <DependentUpon>ConferanceReservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConferanceYonetimi.resx">
       <DependentUpon>ConferanceYonetimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="conferance_saloon.resx">
+      <DependentUpon>conferance_saloon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Etkinlik.resx">
       <DependentUpon>Etkinlik.cs</DependentUpon>
@@ -166,6 +196,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="request.resx">
+      <DependentUpon>request.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>

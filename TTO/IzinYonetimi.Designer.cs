@@ -176,6 +176,7 @@
             this.bekleBtn.TabIndex = 10;
             this.bekleBtn.Text = "Bekleyen";
             this.bekleBtn.UseVisualStyleBackColor = true;
+            this.bekleBtn.Click += new System.EventHandler(this.bekleBtn_Click);
             // 
             // label6
             // 
