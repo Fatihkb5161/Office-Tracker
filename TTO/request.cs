@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace TTO
 {
@@ -15,6 +16,26 @@ namespace TTO
         public request()
         {
             InitializeComponent();
+        }
+
+        private void user_name_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void description_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accept_button_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void deny_button_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

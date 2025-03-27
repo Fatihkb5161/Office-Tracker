@@ -184,7 +184,7 @@
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(322, 23);
             this.password.TabIndex = 2;
-            this.password.Text = "Şifre";
+            this.password.Text = "1234";
             this.password.Click += new System.EventHandler(this.password_Click);
             // 
             // panel2
@@ -218,7 +218,7 @@
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(323, 25);
             this.username.TabIndex = 1;
-            this.username.Text = "E-posta";
+            this.username.Text = "me.kucukbiyikfatih51@gmail.com";
             this.username.Click += new System.EventHandler(this.username_Click);
             // 
             // Giris

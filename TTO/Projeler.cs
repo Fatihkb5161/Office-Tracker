@@ -16,5 +16,10 @@ namespace TTO
         {
             InitializeComponent();
         }
+
+        private void Projeler_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

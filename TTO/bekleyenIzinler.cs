@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace TTO
 {
@@ -18,15 +19,44 @@ namespace TTO
             Panel panel2 = panel1;
         }
 
-        private void bekleyenIzinler_Load(object sender, EventArgs e)
+        void goster()
         {
-            
+            OleDbConnection baglanti = new OleDbConnection("provider=microsoft.jet.oledb.4.0; data source=Database.mdb");
+            baglanti.Open();
+
+            DataSet ds = new DataSet();
+            Console.WriteLine("Debug: 1");
+            OleDbDataAdapter adbtr = new OleDbDataAdapter("select K.ad, K.soyad, K.pozisyon,I.baslangic_tarihi, I.bitis_tarihi, I.aciklama, I.durumu  from Izinler as I INNER JOIN Kullanici as K on I.kullanici_id = K.kullanici_id order by baslangic_tarihi", baglanti);
+            Console.WriteLine("Debug: 2");
+            adbtr.Fill(ds, "okunan veri");
+            DataTable dt = ds.Tables["okunan veri"];
+            baglanti.Close();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                request my_request = new request();
+                string ad_soyad = row["ad"].ToString() + " " +  row["soyad"].ToString();
+                string pozisyonu = Convert.ToString(row["pozisyon"]);
+                string baslangicTarihi = Convert.ToString(row["baslangic_tarihi"]);
+                string bitisTarihi = Convert.ToString(row["bitis_tarihi"]);
+                string aciklama = row["aciklama"].ToString();
+
+                my_request.user_name.Text = ad_soyad;
+                my_request.user_position.Text = pozisyonu;
+                my_request.start_time.Text = baslangicTarihi;
+                my_request.finish_time.Text = bitisTarihi;
+                my_request.description.Text = aciklama;
+
+                flowLayoutPanel1.Controls.Add(my_request); // max 21
+
+
+            }
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void bekleyenIzinler_Load(object sender, EventArgs e)
         {
-            request my_request = new request();
-            flowLayoutPanel1.Controls.Add(my_request); // max 21
+            goster();
         }
     }
 }

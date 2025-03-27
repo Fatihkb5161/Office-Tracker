@@ -14,7 +14,7 @@ namespace TTO
 {
     public partial class MainScreen: Form
     {
-        int kullanici_turu = 0; // 0: Personel, 1: Admin
+        bool kullanici_turu; // true: Yönetici, false: personel
         IzınAlma izin_alma;
         ConferanceReservation reservation;
         Anasayfa anasayfa;
@@ -22,17 +22,18 @@ namespace TTO
         Projeler projeler;
 
         IzinYonetimi izin_yonetimi;
-        public MainScreen()
+        public MainScreen(bool tur)
         {
             InitializeComponent();
+            kullanici_turu = tur;
             this.IsMdiContainer = true;
-            if (kullanici_turu == 0) { this.Text = "Personel Ekranı"; }
-            else if (kullanici_turu == 1) { this.Text = "Yönetici Ekranı"; }
+            if (kullanici_turu == false) { this.Text = "Personel Ekranı"; }
+            else if (kullanici_turu == true) { this.Text = "Yönetici Ekranı"; }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (kullanici_turu == 0)
+            if (kullanici_turu == false)
             {
                 if (izin_alma == null)
                 {
@@ -49,7 +50,7 @@ namespace TTO
                 }
             }
 
-            else if (kullanici_turu == 1 )
+            else if (kullanici_turu == true )
             {
                 if (izin_yonetimi == null)
                 {
@@ -167,7 +168,9 @@ namespace TTO
             projeler = null;
         }
 
-        private void MainScreen_FormClosing(object sender, FormClosingEventArgs e)
+       
+
+        private void MainScreen_FormClosing_1(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
