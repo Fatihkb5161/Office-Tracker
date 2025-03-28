@@ -15,6 +15,7 @@ namespace TTO
     {
 
         bekleyenIzinler bekleyen_izinler;
+        public int kullanici_id;
         public IzinYonetimi()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace TTO
             if (bekleyen_izinler == null)
             {
                 bekleyen_izinler = new bekleyenIzinler();
+                bekleyen_izinler.kullanici_id = kullanici_id;
                 bekleyen_izinler.FormClosed += bekleyenIzinler_Closed;
                 bekleyen_izinler.Show();
             }

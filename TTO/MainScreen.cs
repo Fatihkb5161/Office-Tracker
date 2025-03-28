@@ -14,6 +14,7 @@ namespace TTO
 {
     public partial class MainScreen: Form
     {
+        public int kullanici_id;
         bool kullanici_turu; // true: Yönetici, false: personel
         IzınAlma izin_alma;
         ConferanceReservation reservation;
@@ -38,6 +39,7 @@ namespace TTO
                 if (izin_alma == null)
                 {
                     izin_alma = new IzınAlma();
+                    izin_alma.kullanici_id = kullanici_id;
                     izin_alma.FormClosed += IzinAlma_Closed;
                     izin_alma.MdiParent = this;
                     izin_alma.Dock = DockStyle.Fill;
@@ -55,6 +57,7 @@ namespace TTO
                 if (izin_yonetimi == null)
                 {
                     izin_yonetimi = new IzinYonetimi();
+                    izin_yonetimi.kullanici_id = kullanici_id;
                     izin_yonetimi.FormClosed += IzinYonetimi_Closed;
                     izin_yonetimi.MdiParent = this;
                     izin_yonetimi.Dock = DockStyle.Fill;
@@ -107,6 +110,7 @@ namespace TTO
             if (anasayfa == null)
             {
                 anasayfa = new Anasayfa();
+                anasayfa.kullanici_id = kullanici_id;
                 anasayfa.FormClosed += Anasayfa_Closed;
                 anasayfa.MdiParent = this;
                 anasayfa.Dock = DockStyle.Fill;
@@ -173,6 +177,11 @@ namespace TTO
         private void MainScreen_FormClosing_1(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void MainScreen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

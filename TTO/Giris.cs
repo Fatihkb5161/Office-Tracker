@@ -18,6 +18,7 @@ namespace TTO
         MainScreen main_screen;
         KayitOl kayit_ol;
         public bool kullaniciTuru;
+        public int kullanici_id;
         public Giris()
         {
             InitializeComponent();
@@ -51,7 +52,9 @@ namespace TTO
             OleDbConnection baglanti = new OleDbConnection("provider=microsoft.jet.oledb.4.0; data source=Database.mdb");
             baglanti.Open();
 
-            OleDbCommand sorgu = new OleDbCommand("select e_posta, sifre from Kullanici where e_posta=@ad and sifre=@sifre", baglanti);
+
+
+            OleDbCommand sorgu = new OleDbCommand("select kullanici_id, e_posta, sifre from Kullanici where e_posta=@ad and sifre=@sifre", baglanti);
 
             sorgu.Parameters.AddWithValue("@ad", username.Text);
             sorgu.Parameters.AddWithValue("@sifre", password.Text);
@@ -63,19 +66,21 @@ namespace TTO
             if (dr.Read())
             {
                 //giriş yapacak
-                OleDbCommand new_sorgu = new OleDbCommand("select kullanici_turu from Kullanici where e_posta=@tur", baglanti);
+                OleDbCommand new_sorgu = new OleDbCommand("select kullanici_id, kullanici_turu from Kullanici where e_posta=@tur", baglanti);
                 new_sorgu.Parameters.AddWithValue("@tur", username.Text);
 
                 OleDbDataReader dr1;
                 dr1 = new_sorgu.ExecuteReader();
                 if (dr1.Read())
                 {
-                    kullaniciTuru = dr1.GetBoolean(0); 
+                    kullanici_id = Convert.ToInt16(dr1.GetInt32(0));
+                    kullaniciTuru = dr1.GetBoolean(1);
 
                 }
                 dr1.Close();
 
                 main_screen = new MainScreen(kullaniciTuru);
+                main_screen.kullanici_id = kullanici_id;
                 main_screen.Show();
                 this.Hide();
             }

@@ -14,6 +14,7 @@ namespace TTO
     public partial class IzınAlma: Form
     {
         izinFormu izin_formu;
+        public int kullanici_id;
         public IzınAlma()
         {
             InitializeComponent();
@@ -32,6 +33,7 @@ namespace TTO
             if (izin_formu == null)
             {
                 izin_formu = new izinFormu();
+                izin_formu.kullanici_id = kullanici_id;
                 izin_formu.FormClosed += izinFormu_Closed;
                 izin_formu.Show();
             }
@@ -49,20 +51,41 @@ namespace TTO
 
         private void IzınAlma_Load(object sender, EventArgs e)
         {
-            goster();
+            using (OleDbConnection baglanti = new OleDbConnection("provider=microsoft.jet.oledb.4.0; data source=Database.mdb"))
+            {
+                baglanti.Open();
+
+                using (OleDbCommand sorgu = new OleDbCommand("select kullanici_id, izin_id from Izinler where kullanici_id=@kullanici", baglanti))
+                {
+                    sorgu.Parameters.AddWithValue("@kullanici", kullanici_id);
+                    using (OleDbDataReader dr = sorgu.ExecuteReader())
+                    {
+                        if (dr.Read())
+                        {
+                            goster();
+                        }
+                        else
+                        {
+                            MessageBox.Show("İzinler Yüklenemedi");
+                        }
+                    }
+                }
+            }
         }
 
 
         void goster()
         {
-            OleDbConnection baglanti = new OleDbConnection("provider=microsoft.jet.oledb.4.0; data source=Database.mdb");
-            baglanti.Open();
-            DataSet ds = new DataSet();
-            OleDbDataAdapter adbtr = new OleDbDataAdapter("select basvuru_tarihi, baslangic_tarihi, bitis_tarihi, aciklama, durumu from Izinler order by baslangic_tarihi", baglanti);
-            adbtr.Fill(ds, "okunan veri");
+            using (OleDbConnection baglanti = new OleDbConnection("provider=microsoft.jet.oledb.4.0; data source=Database.mdb"))
+            {
+                baglanti.Open();
+                DataSet ds = new DataSet();
+                OleDbDataAdapter adbtr = new OleDbDataAdapter($"select basvuru_tarihi, baslangic_tarihi, bitis_tarihi, aciklama, durumu from Izinler where kullanici_id=@kullanici order by baslangic_tarihi", baglanti);
+                adbtr.SelectCommand.Parameters.AddWithValue("@kullanici", kullanici_id);
+                adbtr.Fill(ds, "okunan veri");
 
-            dataGridView1.DataSource = ds.Tables["okunan veri"];
-            baglanti.Close();
+                dataGridView1.DataSource = ds.Tables["okunan veri"];
+            }
 
         }
 
