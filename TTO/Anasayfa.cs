@@ -35,7 +35,7 @@ namespace TTO
             Console.WriteLine("Debug: 1");
             OleDbDataAdapter adbtr = new OleDbDataAdapter("select kullanici_id, e_posta, ad, soyad, cinsiyet, tel_no, ofis_no, pozisyon where", baglanti);
             Console.WriteLine("Debug: 2");
-            adbtr.Fill(ds, "okunan veri");
+            adbtr.Fill(ds, "okunan_veri");
             DataTable dt = ds.Tables["okunan veri"];
             using (OleDbCommand sorgu = new OleDbCommand("select durumu from Izinler where durumu='Beklemede'", baglanti))
             {
